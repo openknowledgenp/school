@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function AboutScreen() {
@@ -60,42 +61,23 @@ export default function AboutScreen() {
           </p>
         </div>
 
-        {/* Visual */}
+        {/* Illustration */}
         <div
           style={{
             aspectRatio: "1/1",
             borderRadius: 24,
-            background: "linear-gradient(135deg,#00CFA3,#38D8FC,#717FDA)",
+            background: "rgba(56,216,252,.1)",
+            border: "1px solid #E2E8EB",
             position: "relative",
             overflow: "hidden",
           }}
         >
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundImage:
-                "radial-gradient(rgba(255,255,255,.24) 1.5px,transparent 1.5px)",
-              backgroundSize: "24px 24px",
-              opacity: 0.5,
-            }}
+          <Image
+            src="/uploads/collaboration.png"
+            alt="Team collaboration"
+            fill
+            style={{ objectFit: "contain", padding: 32 }}
           />
-          <div
-            style={{
-              position: "absolute",
-              left: 0,
-              right: 0,
-              bottom: 0,
-              padding: "18px 20px",
-              color: "#0B1014",
-              fontSize: 12,
-              fontWeight: 700,
-              letterSpacing: ".06em",
-              textTransform: "uppercase",
-            }}
-          >
-            ▦ Team / community photo
-          </div>
         </div>
       </section>
 
@@ -117,16 +99,22 @@ export default function AboutScreen() {
           {[
             {
               color: "#00CFA3",
+              bg: "rgba(0,207,163,.1)",
+              icon: "/uploads/mission.png",
               title: "Open by default",
               desc: "Everything we create is freely licensed for anyone to use, adapt and share.",
             },
             {
               color: "#38D8FC",
+              bg: "rgba(56,216,252,.1)",
+              icon: "/uploads/impact.png",
               title: "Practical & local",
               desc: "We teach with real Nepali data and examples people recognise from daily life.",
             },
             {
               color: "#717FDA",
+              bg: "rgba(113,127,218,.1)",
+              icon: "/uploads/connect-community.png",
               title: "Inclusive community",
               desc: "Learning is for everyone, with special focus on women and underserved groups.",
             },
@@ -142,13 +130,17 @@ export default function AboutScreen() {
             >
               <div
                 style={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 12,
-                  background: v.color,
+                  width: 56,
+                  height: 56,
+                  borderRadius: 14,
+                  background: v.bg,
                   marginBottom: 16,
+                  position: "relative",
+                  overflow: "hidden",
                 }}
-              />
+              >
+                <Image src={v.icon} alt="" fill style={{ objectFit: "contain", padding: 8 }} />
+              </div>
               <h4
                 className="font-display"
                 style={{ margin: "0 0 8px", fontSize: 18 }}
@@ -237,7 +229,6 @@ export default function AboutScreen() {
             </div>
           </div>
 
-          {/* Form */}
           <div style={{ display: "flex", flexDirection: "column", gap: 12, justifyContent: "center" }}>
             <input
               placeholder="Your name"

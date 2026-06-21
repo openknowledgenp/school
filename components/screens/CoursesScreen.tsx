@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { COURSES } from "@/lib/data";
 
 export default function CoursesScreen() {
@@ -7,34 +8,60 @@ export default function CoursesScreen() {
       className="animate-fade-up"
       style={{ maxWidth: 1180, margin: "0 auto", padding: "64px 28px 88px" }}
     >
-      <div style={{ maxWidth: "42em", marginBottom: 44 }}>
+      {/* Header row */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr auto",
+          gap: 48,
+          alignItems: "center",
+          marginBottom: 44,
+        }}
+      >
+        <div style={{ maxWidth: "42em" }}>
+          <div
+            style={{
+              fontSize: 14,
+              fontWeight: 700,
+              letterSpacing: ".08em",
+              textTransform: "uppercase",
+              color: "#717FDA",
+              marginBottom: 12,
+            }}
+          >
+            Courses
+          </div>
+          <h1
+            className="font-display"
+            style={{
+              fontSize: "clamp(34px,4.5vw,52px)",
+              margin: "0 0 18px",
+              letterSpacing: "-0.025em",
+            }}
+          >
+            Learn digital, data &amp; AI skills
+          </h1>
+          <p style={{ fontSize: 18, lineHeight: 1.62, color: "#454953", margin: 0 }}>
+            Short, practical courses built for journalists, students, civil
+            society and curious citizens. No prior experience needed, just bring
+            your questions.
+          </p>
+        </div>
         <div
           style={{
-            fontSize: 14,
-            fontWeight: 700,
-            letterSpacing: ".08em",
-            textTransform: "uppercase",
-            color: "#717FDA",
-            marginBottom: 12,
+            width: 180,
+            height: 180,
+            position: "relative",
+            flexShrink: 0,
           }}
         >
-          Courses
+          <Image
+            src="/uploads/board.png"
+            alt="Learning illustration"
+            fill
+            style={{ objectFit: "contain" }}
+          />
         </div>
-        <h1
-          className="font-display"
-          style={{
-            fontSize: "clamp(34px,4.5vw,52px)",
-            margin: "0 0 18px",
-            letterSpacing: "-0.025em",
-          }}
-        >
-          Learn digital, data &amp; AI skills
-        </h1>
-        <p style={{ fontSize: 18, lineHeight: 1.62, color: "#454953", margin: 0 }}>
-          Short, practical courses built for journalists, students, civil
-          society and curious citizens. No prior experience needed, just bring
-          your questions.
-        </p>
       </div>
 
       {/* Course grid */}
@@ -131,33 +158,38 @@ export default function CoursesScreen() {
           {
             num: "01",
             color: "#00CFA3",
+            icon: "/uploads/mission.png",
             title: "Self-paced & free",
             desc: "Work through bite-sized modules whenever it suits you, all openly licensed.",
           },
           {
             num: "02",
             color: "#38D8FC",
+            icon: "/uploads/training.png",
             title: "Hands-on practice",
             desc: "Every course uses real Nepali examples and exercises you can try yourself.",
           },
           {
             num: "03",
             color: "#717FDA",
+            icon: "/uploads/connect-community.png",
             title: "Workshops & support",
             desc: "Pair online learning with our in-person trainings across the country.",
           },
         ].map((item) => (
-          <div key={item.num}>
-            <div
-              className="font-display"
-              style={{ fontSize: 30, color: item.color, fontWeight: 700 }}
-            >
-              {item.num}
+          <div key={item.num} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+              <div
+                className="font-display"
+                style={{ fontSize: 30, color: item.color, fontWeight: 700, lineHeight: 1 }}
+              >
+                {item.num}
+              </div>
+              <div style={{ width: 48, height: 48, position: "relative" }}>
+                <Image src={item.icon} alt="" fill style={{ objectFit: "contain" }} />
+              </div>
             </div>
-            <h4
-              className="font-display"
-              style={{ margin: "10px 0 6px", fontSize: 18 }}
-            >
+            <h4 className="font-display" style={{ margin: 0, fontSize: 18 }}>
               {item.title}
             </h4>
             <p style={{ margin: 0, fontSize: 14, color: "#5A636B", lineHeight: 1.55 }}>

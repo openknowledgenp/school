@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { PROJECTS } from "@/lib/data";
 
 export default function ProjectsScreen() {
@@ -49,23 +50,21 @@ export default function ProjectsScreen() {
               gridTemplateColumns: "0.8fr 1.2fr",
             }}
           >
-            {/* Gradient image placeholder */}
+            {/* Illustration panel */}
             <div
               style={{
-                background: `linear-gradient(135deg,${p.color},#15161A)`,
+                background: p.color + "18",
                 position: "relative",
                 minHeight: 200,
+                borderRight: `3px solid ${p.color}`,
+                overflow: "hidden",
               }}
             >
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  backgroundImage:
-                    "radial-gradient(rgba(255,255,255,.22) 1.4px,transparent 1.4px)",
-                  backgroundSize: "20px 20px",
-                  opacity: 0.5,
-                }}
+              <Image
+                src={p.illustration}
+                alt={p.title}
+                fill
+                style={{ objectFit: "contain", padding: "20px 24px" }}
               />
               <span
                 style={{

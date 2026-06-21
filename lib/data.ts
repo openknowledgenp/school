@@ -13,6 +13,7 @@ export interface Project {
   title: string;
   year: string;
   color: string;
+  illustration: string;
   desc: string;
   tags: string[];
 }
@@ -41,10 +42,10 @@ export const COURSES: Course[] = [
 ];
 
 export const PROJECTS: Project[] = [
-  { title: "Gender Data 101", year: "2023–2024", color: "#717FDA", desc: "A training programme and toolkit that helps advocates and journalists find, read and use gender-disaggregated data for evidence-based campaigns.", tags: ["Gender", "Training", "Toolkit"] },
-  { title: "Data & Digital Literacy for Women Entrepreneurs", year: "2024", color: "#00CFA3", desc: "Hands-on workshops equipping women-led small businesses with practical data, digital and online-safety skills to grow and protect their work.", tags: ["Digital", "Workshops"] },
-  { title: "Open Data Literacy in Schools", year: "2022–2023", color: "#38D8FC", desc: "Bringing open data, charts and critical thinking into classrooms, with teacher guides and student-friendly datasets.", tags: ["Open Data", "Youth"] },
-  { title: "Community Data Fellowship", year: "2023", color: "#717FDA", desc: "A mentored programme supporting local changemakers to design and run their own small data projects in their districts.", tags: ["Training", "Community"] },
+  { title: "Gender Data 101", year: "2023–2024", color: "#717FDA", illustration: "/uploads/policy.png", desc: "A training programme and toolkit that helps advocates and journalists find, read and use gender-disaggregated data for evidence-based campaigns.", tags: ["Gender", "Training", "Toolkit"] },
+  { title: "Data & Digital Literacy for Women Entrepreneurs", year: "2024", color: "#00CFA3", illustration: "/uploads/training.png", desc: "Hands-on workshops equipping women-led small businesses with practical data, digital and online-safety skills to grow and protect their work.", tags: ["Digital", "Workshops"] },
+  { title: "Open Data Literacy in Schools", year: "2022–2023", color: "#38D8FC", illustration: "/uploads/books.png", desc: "Bringing open data, charts and critical thinking into classrooms, with teacher guides and student-friendly datasets.", tags: ["Open Data", "Youth"] },
+  { title: "Community Data Fellowship", year: "2023", color: "#717FDA", illustration: "/uploads/connect-community.png", desc: "A mentored programme supporting local changemakers to design and run their own small data projects in their districts.", tags: ["Training", "Community"] },
 ];
 
 export const ALL_RESOURCES: Resource[] = [

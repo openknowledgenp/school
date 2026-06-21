@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { STATS } from "@/lib/data";
 
 export default function ImpactScreen() {
@@ -35,13 +36,7 @@ export default function ImpactScreen() {
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4,1fr)",
-            gap: 20,
-          }}
-        >
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 20 }}>
           {STATS.map((s) => (
             <div
               key={s.label}
@@ -63,9 +58,7 @@ export default function ImpactScreen() {
               >
                 {s.num}
               </div>
-              <div
-                style={{ marginTop: 10, fontSize: 15, color: "#5A636B", fontWeight: 600 }}
-              >
+              <div style={{ marginTop: 10, fontSize: 15, color: "#5A636B", fontWeight: 600 }}>
                 {s.label}
               </div>
             </div>
@@ -78,7 +71,7 @@ export default function ImpactScreen() {
         style={{
           maxWidth: 1180,
           margin: "0 auto",
-          padding: "48px 28px 88px",
+          padding: "48px 28px 20px",
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: 24,
@@ -107,10 +100,7 @@ export default function ImpactScreen() {
             }}
           />
           <div style={{ position: "relative" }}>
-            <h3
-              className="font-display"
-              style={{ fontSize: 22, margin: "0 0 8px" }}
-            >
+            <h3 className="font-display" style={{ fontSize: 22, margin: "0 0 8px" }}>
               Where we work
             </h3>
             <p
@@ -126,22 +116,20 @@ export default function ImpactScreen() {
               counting, from Kathmandu to rural municipalities.
             </p>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              {["Kathmandu", "Lalitpur", "Pokhara", "Chitwan", "+ 11 more"].map(
-                (place) => (
-                  <span
-                    key={place}
-                    style={{
-                      background: "rgba(255,255,255,.16)",
-                      borderRadius: 999,
-                      padding: "6px 13px",
-                      fontSize: 13,
-                      fontWeight: 600,
-                    }}
-                  >
-                    {place}
-                  </span>
-                )
-              )}
+              {["Kathmandu", "Lalitpur", "Pokhara", "Chitwan", "+ 11 more"].map((place) => (
+                <span
+                  key={place}
+                  style={{
+                    background: "rgba(255,255,255,.16)",
+                    borderRadius: 999,
+                    padding: "6px 13px",
+                    fontSize: 13,
+                    fontWeight: 600,
+                  }}
+                >
+                  {place}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -166,12 +154,7 @@ export default function ImpactScreen() {
           </div>
           <p
             className="font-display"
-            style={{
-              fontSize: 22,
-              lineHeight: 1.45,
-              margin: "0 0 20px",
-              letterSpacing: "-0.01em",
-            }}
+            style={{ fontSize: 22, lineHeight: 1.45, margin: "0 0 20px", letterSpacing: "-0.01em" }}
           >
             Before the workshop I was scared of spreadsheets. Now I use open
             data to back up everything I report.
@@ -186,15 +169,51 @@ export default function ImpactScreen() {
               }}
             />
             <div>
-              <div style={{ fontWeight: 700, fontSize: 15 }}>
-                Workshop participant
-              </div>
+              <div style={{ fontWeight: 700, fontSize: 15 }}>Workshop participant</div>
               <div style={{ fontSize: 13, color: "#828893" }}>
                 Local journalist · example quote
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Impact illustration strip */}
+      <section
+        style={{
+          maxWidth: 1180,
+          margin: "0 auto",
+          padding: "32px 28px 88px",
+          display: "grid",
+          gridTemplateColumns: "repeat(4,1fr)",
+          gap: 16,
+        }}
+      >
+        {[
+          { src: "/uploads/campagne.png", label: "Advocacy" },
+          { src: "/uploads/press.png", label: "Media" },
+          { src: "/uploads/reproducible-research.png", label: "Research" },
+          { src: "/uploads/impact.png", label: "Community impact" },
+        ].map((item) => (
+          <div
+            key={item.label}
+            style={{
+              background: "#fff",
+              border: "1px solid #E2E8EB",
+              borderRadius: 16,
+              padding: "20px 16px 16px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <div style={{ width: "100%", aspectRatio: "1/1", position: "relative" }}>
+              <Image src={item.src} alt={item.label} fill style={{ objectFit: "contain", padding: 8 }} />
+            </div>
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#5A636B" }}>{item.label}</span>
+          </div>
+        ))}
       </section>
     </div>
   );

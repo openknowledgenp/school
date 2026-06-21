@@ -91,38 +91,20 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 position: "relative",
                 borderRadius: 24,
                 overflow: "hidden",
+                background: "#EDF2F4",
+                boxShadow: "0 34px 64px -32px rgba(20,22,30,.35)",
                 aspectRatio: "4/3",
-                background: "linear-gradient(135deg,#38D8FC 0%,#717FDA 55%,#15161A 100%)",
-                boxShadow: "0 34px 64px -32px rgba(20,22,30,.45)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  backgroundImage:
-                    "radial-gradient(rgba(255,255,255,.28) 1.5px,transparent 1.5px)",
-                  backgroundSize: "22px 22px",
-                  opacity: 0.5,
-                }}
+              <Image
+                src="/uploads/board.png"
+                alt="Community workshop"
+                fill
+                style={{ objectFit: "contain", padding: 24 }}
               />
-              <div
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  padding: "18px 20px",
-                  color: "#fff",
-                  fontSize: 12,
-                  fontWeight: 600,
-                  letterSpacing: ".06em",
-                  textTransform: "uppercase",
-                  opacity: 0.92,
-                }}
-              >
-                ▦ Community workshop photo
-              </div>
             </div>
 
             {/* Floating badge 1 */}
@@ -240,24 +222,24 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
           {[
             {
               accent: "#38D8FC",
-              iconBg: "rgba(56,216,252,.18)",
-              icon: "/assets/icons/tools.png",
+              iconBg: "rgba(56,216,252,.14)",
+              icon: "/uploads/tools.png",
               title: "Digital literacy",
               desc: "Use everyday digital tools confidently, protect your accounts and devices, and stay safe and informed online.",
               tags: "Digital Security · Online Safety",
             },
             {
               accent: "#00CFA3",
-              iconBg: "rgba(0,207,163,.16)",
-              icon: "/assets/icons/data.png",
+              iconBg: "rgba(0,207,163,.12)",
+              icon: "/uploads/data.png",
               title: "Data literacy",
               desc: "Find, read and question data, from everyday spreadsheets to open government datasets, and turn it into clear, honest stories.",
               tags: "Open Data · Data Viz · Spreadsheets",
             },
             {
               accent: "#717FDA",
-              iconBg: "rgba(113,127,218,.18)",
-              icon: "/assets/icons/knowledge.png",
+              iconBg: "rgba(113,127,218,.14)",
+              icon: "/uploads/knowledge.png",
               title: "AI literacy",
               desc: "Understand what AI can and can't do, spot its risks, and use it critically, ethically and responsibly.",
               tags: "AI Literacy · Misinformation",
@@ -276,17 +258,19 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               <div style={{ padding: 28 }}>
                 <div
                   style={{
-                    width: 64,
-                    height: 64,
-                    borderRadius: 14,
+                    width: 80,
+                    height: 80,
+                    borderRadius: 16,
                     background: card.iconBg,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     marginBottom: 18,
+                    overflow: "hidden",
+                    position: "relative",
                   }}
                 >
-                  <Image src={card.icon} alt="" width={42} height={42} style={{ objectFit: "contain" }} />
+                  <Image src={card.icon} alt="" fill style={{ objectFit: "contain", padding: 8 }} />
                 </div>
                 <h3
                   className="font-display"
@@ -474,19 +458,17 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               <div
                 style={{
                   aspectRatio: "16/7",
-                  background: `linear-gradient(135deg,${p.color},#15161A)`,
+                  background: p.color + "18",
                   position: "relative",
+                  overflow: "hidden",
+                  borderBottom: `3px solid ${p.color}`,
                 }}
               >
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    backgroundImage:
-                      "radial-gradient(rgba(255,255,255,.22) 1.4px,transparent 1.4px)",
-                    backgroundSize: "20px 20px",
-                    opacity: 0.5,
-                  }}
+                <Image
+                  src={p.illustration}
+                  alt={p.title}
+                  fill
+                  style={{ objectFit: "contain", padding: "16px 28px" }}
                 />
                 <span
                   style={{
@@ -603,10 +585,10 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {[
-              { icon: "/assets/icons/books.png", label: "Guides", sub: "Step-by-step handbooks" },
-              { icon: "/assets/icons/service.png", label: "Toolkits", sub: "Slides & activity packs" },
-              { icon: "/assets/icons/create-open-data.png", label: "Datasets", sub: "Ready-to-use samples" },
-              { icon: "/assets/icons/policy.png", label: "Templates", sub: "Checklists & cheatsheets" },
+              { icon: "/uploads/books.png", label: "Guides", sub: "Step-by-step handbooks" },
+              { icon: "/uploads/service.png", label: "Toolkits", sub: "Slides & activity packs" },
+              { icon: "/uploads/create-open-data.png", label: "Datasets", sub: "Ready-to-use samples" },
+              { icon: "/uploads/governance.png", label: "Templates", sub: "Checklists & cheatsheets" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -617,7 +599,9 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                   padding: 16,
                 }}
               >
-                <Image src={item.icon} alt="" width={38} height={38} style={{ objectFit: "contain" }} />
+                <div style={{ width: 44, height: 44, position: "relative" }}>
+                  <Image src={item.icon} alt="" fill style={{ objectFit: "contain" }} />
+                </div>
                 <div style={{ fontWeight: 700, marginTop: 8, fontSize: 15 }}>{item.label}</div>
                 <div style={{ fontSize: 13, color: "#828893" }}>{item.sub}</div>
               </div>
