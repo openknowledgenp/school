@@ -39,12 +39,14 @@ export default function CoursesScreen() {
               letterSpacing: "-0.025em",
             }}
           >
-            Learn digital, data &amp; AI skills
+            Skills you can start using right away
           </h1>
           <p style={{ fontSize: 18, lineHeight: 1.62, color: "#454953", margin: 0 }}>
-            Short, practical courses built for journalists, students, civil
-            society and curious citizens. No prior experience needed, just bring
-            your questions.
+            Our courses are short, modular and built from real Nepali examples.
+            They draw on a decade of training rooms in Kathmandu, Pokhara,
+            Butwal, Tulsipur, Dang, Birgunj, Janakpurdham, Simta, Lekbeshi,
+            Lumbini, Bardiya, Lalitpur and Dhangadhi. Each course is free,
+            openly licensed and can be self-taught or facilitated.
           </p>
         </div>
         <div
@@ -78,9 +80,10 @@ export default function CoursesScreen() {
               overflow: "hidden",
               display: "flex",
               flexDirection: "column",
+              position: "relative",
             }}
           >
-            <div style={{ height: 8, background: c.color }} />
+            <div style={{ height: 8, background: c.status ? "#C3CBCE" : c.color }} />
             <div
               style={{
                 padding: 26,
@@ -90,22 +93,38 @@ export default function CoursesScreen() {
                 flex: 1,
               }}
             >
-              <span
-                style={{
-                  alignSelf: "flex-start",
-                  background: c.color,
-                  color: "#0B1014",
-                  fontSize: 12,
-                  fontWeight: 700,
-                  padding: "5px 11px",
-                  borderRadius: 999,
-                }}
-              >
-                {c.tag}
-              </span>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+                <span
+                  style={{
+                    background: c.status ? "#EDF2F4" : c.color,
+                    color: c.status ? "#828893" : "#0B1014",
+                    fontSize: 12,
+                    fontWeight: 700,
+                    padding: "5px 11px",
+                    borderRadius: 999,
+                  }}
+                >
+                  {c.tag}
+                </span>
+                {c.status && (
+                  <span
+                    style={{
+                      background: "#FFF3E0",
+                      color: "#B45309",
+                      fontSize: 11,
+                      fontWeight: 700,
+                      padding: "4px 9px",
+                      borderRadius: 999,
+                      letterSpacing: ".03em",
+                    }}
+                  >
+                    {c.status}
+                  </span>
+                )}
+              </div>
               <h3
                 className="font-display"
-                style={{ fontSize: 21, margin: 0, letterSpacing: "-0.01em" }}
+                style={{ fontSize: 21, margin: 0, letterSpacing: "-0.01em", color: c.status ? "#828893" : "#15161A" }}
               >
                 {c.title}
               </h3>
@@ -132,16 +151,18 @@ export default function CoursesScreen() {
                 <span style={{ fontSize: 13, color: "#828893", fontWeight: 600 }}>
                   {c.level} · {c.modules}
                 </span>
-                <span style={{ fontWeight: 700, color: "#717FDA", fontSize: 14 }}>
-                  Start →
-                </span>
+                {!c.status && (
+                  <span style={{ fontWeight: 700, color: "#717FDA", fontSize: 14 }}>
+                    Start →
+                  </span>
+                )}
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* How it works */}
+      {/* How to use these courses */}
       <div
         style={{
           marginTop: 48,
@@ -159,22 +180,22 @@ export default function CoursesScreen() {
             num: "01",
             color: "#00CFA3",
             icon: "/uploads/mission.png",
-            title: "Self-paced & free",
-            desc: "Work through bite-sized modules whenever it suits you, all openly licensed.",
+            title: "Self-study, free",
+            desc: "Anyone may work through the modules and resources at their own pace. All content is openly licensed.",
           },
           {
             num: "02",
             color: "#38D8FC",
             icon: "/uploads/training.png",
-            title: "Hands-on practice",
-            desc: "Every course uses real Nepali examples and exercises you can try yourself.",
+            title: "Request a facilitated workshop",
+            desc: "Schools, newsrooms, civil society groups and local governments can request a tailored in-person workshop from our team.",
           },
           {
             num: "03",
             color: "#717FDA",
             icon: "/uploads/connect-community.png",
-            title: "Workshops & support",
-            desc: "Pair online learning with our in-person trainings across the country.",
+            title: "English, Nepali or both",
+            desc: "We can deliver sessions in English, Nepali or bilingually, depending on what works best for your community.",
           },
         ].map((item) => (
           <div key={item.num} style={{ display: "flex", flexDirection: "column", gap: 12 }}>

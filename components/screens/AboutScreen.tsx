@@ -51,13 +51,17 @@ export default function AboutScreen() {
             }}
           >
             Open Knowledge Foundation Nepal is part of the global Open
-            Knowledge network. We believe knowledge, especially data, should be
-            open, understandable and useful to everyone.
+            Knowledge network. For more than a decade we have helped Nepalis
+            turn raw information into clear decisions — training youth, women,
+            journalists, civil society, small enterprises and local government
+            officials to work with data confidently, use digital tools safely
+            and engage with artificial intelligence critically.
           </p>
           <p style={{ fontSize: 17, lineHeight: 1.64, color: "#5A636B", margin: 0 }}>
-            Through free courses, open resources and community projects, we
-            help people across Nepal find, understand and act on data with
-            confidence.
+            Everything we build is openly licensed and rooted in Nepali
+            contexts. Through free courses, open resources and community
+            projects, we help people across Nepal find, understand and act on
+            data with confidence.
           </p>
         </div>
 
@@ -102,21 +106,21 @@ export default function AboutScreen() {
               bg: "rgba(0,207,163,.1)",
               icon: "/uploads/mission.png",
               title: "Open by default",
-              desc: "Everything we create is freely licensed for anyone to use, adapt and share.",
+              desc: "Every course, slide deck, toolkit and dataset we publish is freely licensed, so any teacher, journalist or community leader can pick it up and run their own session.",
             },
             {
               color: "#38D8FC",
               bg: "rgba(56,216,252,.1)",
               icon: "/uploads/impact.png",
-              title: "Practical & local",
-              desc: "We teach with real Nepali data and examples people recognise from daily life.",
+              title: "Practical and local",
+              desc: "We teach with real Nepali datasets, real Nepali stories and real Nepali examples. Materials are increasingly bilingual in Nepali and English.",
             },
             {
               color: "#717FDA",
               bg: "rgba(113,127,218,.1)",
               icon: "/uploads/connect-community.png",
               title: "Inclusive community",
-              desc: "Learning is for everyone, with special focus on women and underserved groups.",
+              desc: "We focus on people often left out of data and tech conversations, with sustained, multi-year programmes for women, youth in provinces outside the Kathmandu Valley, persons with disabilities and underserved local governments.",
             },
           ].map((v) => (
             <div
@@ -188,8 +192,9 @@ export default function AboutScreen() {
                 maxWidth: "30em",
               }}
             >
-              Want to partner, host a workshop, or volunteer? We'd love to hear
-              from you.
+              Want to partner, host a workshop or request a tailored training for
+              your school, newsroom, local government or civil society
+              organisation? We deliver in English, Nepali or both.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
