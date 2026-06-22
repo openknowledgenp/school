@@ -185,7 +185,7 @@ export default function CoursesScreen() {
           },
           {
             num: "02",
-            color: "#38D8FC",
+            color: "#9AEEF7",
             icon: "/uploads/training.png",
             title: "Request a facilitated workshop",
             desc: "Schools, newsrooms, civil society groups and local governments can request a tailored in-person workshop from our team.",

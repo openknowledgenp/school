@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, DM_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter, Gloock } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-space-grotesk",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-dm-sans",
+  variable: "--font-body",
+  display: "swap",
+});
+
+const gloock = Gloock({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -26,7 +33,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
+    <html
+      lang="en"
+      className={`${plusJakartaSans.variable} ${inter.variable} ${gloock.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

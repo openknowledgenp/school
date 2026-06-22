@@ -10,9 +10,9 @@ html, body {
 }
 
 body {
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
-  color: #15161A;
-  background: #F4F7F9;
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: #0F0F0F;
+  background: #F7F7F7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -20,7 +20,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 input, textarea { font-family: inherit; }
 a { color: inherit; text-decoration: none; }
 
-.font-display { font-family: var(--font-space-grotesk), system-ui, sans-serif; }
+/* Display: Plus Jakarta Sans — bold, geometric, IOI BW Gradual feel */
+.font-display { font-family: var(--font-display), system-ui, sans-serif; }
+
+/* Serif accent: Gloock — transitional serif, editorial, same as IOI */
+.font-serif { font-family: var(--font-serif), Georgia, serif; }
 
 @keyframes floaty {
   0%, 100% { transform: translateY(0); }

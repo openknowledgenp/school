@@ -2,22 +2,22 @@
 import { TIMELINE_YEARS } from "@/lib/data";
 
 const TAG_COLORS: Record<string, string> = {
-  Youth: "#38D8FC",
+  Youth: "#9AEEF7",
   "Open Data": "#00CFA3",
   Training: "#00CFA3",
-  Journalism: "#38D8FC",
+  Journalism: "#9AEEF7",
   "Data Viz": "#00CFA3",
   Gender: "#717FDA",
   Data: "#00CFA3",
   Environment: "#00CFA3",
-  Community: "#38D8FC",
+  Community: "#9AEEF7",
   Fellowship: "#717FDA",
   OpenStreetMap: "#00CFA3",
   "Local Government": "#717FDA",
   Governance: "#717FDA",
   AI: "#717FDA",
-  Digital: "#38D8FC",
-  Livelihoods: "#38D8FC",
+  Digital: "#9AEEF7",
+  Livelihoods: "#9AEEF7",
 };
 
 function tagColor(t: string) {
@@ -138,7 +138,7 @@ export default function ProjectsScreen() {
                       <span
                         style={{
                           background: yearGroup.color + "20",
-                          color: yearGroup.color === "#38D8FC" ? "#06303C" : yearGroup.color,
+                          color: yearGroup.color === "#9AEEF7" ? "#06303C" : yearGroup.color,
                           fontSize: 12,
                           fontWeight: 700,
                           padding: "6px 13px",
@@ -170,7 +170,7 @@ export default function ProjectsScreen() {
                           key={t}
                           style={{
                             background: tagColor(t) + "18",
-                            color: tagColor(t) === "#38D8FC" ? "#06303C" : tagColor(t),
+                            color: tagColor(t) === "#9AEEF7" ? "#06303C" : tagColor(t),
                             fontSize: 12,
                             fontWeight: 600,
                             padding: "4px 11px",

@@ -70,7 +70,7 @@ export default function AboutScreen() {
           style={{
             aspectRatio: "1/1",
             borderRadius: 24,
-            background: "rgba(56,216,252,.1)",
+            background: "rgba(154,238,247,.1)",
             border: "1px solid #E2E8EB",
             position: "relative",
             overflow: "hidden",
@@ -109,8 +109,8 @@ export default function AboutScreen() {
               desc: "Every course, slide deck, toolkit and dataset we publish is freely licensed, so any teacher, journalist or community leader can pick it up and run their own session.",
             },
             {
-              color: "#38D8FC",
-              bg: "rgba(56,216,252,.1)",
+              color: "#9AEEF7",
+              bg: "rgba(154,238,247,.1)",
               icon: "/uploads/impact.png",
               title: "Practical and local",
               desc: "We teach with real Nepali datasets, real Nepali stories and real Nepali examples. Materials are increasingly bilingual in Nepali and English.",
@@ -203,8 +203,8 @@ export default function AboutScreen() {
                     width: 38,
                     height: 38,
                     borderRadius: 10,
-                    background: "rgba(56,216,252,.18)",
-                    color: "#38D8FC",
+                    background: "rgba(154,238,247,.18)",
+                    color: "#9AEEF7",
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -220,8 +220,8 @@ export default function AboutScreen() {
                     width: 38,
                     height: 38,
                     borderRadius: 10,
-                    background: "rgba(56,216,252,.18)",
-                    color: "#38D8FC",
+                    background: "rgba(154,238,247,.18)",
+                    color: "#9AEEF7",
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -277,8 +277,8 @@ export default function AboutScreen() {
             />
             <button
               style={{
-                background: "#38D8FC",
-                color: "#06303C",
+                background: "#FFDE17",
+                color: "#0F0F0F",
                 padding: 14,
                 borderRadius: 12,
                 fontWeight: 700,
