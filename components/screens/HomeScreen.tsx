@@ -71,17 +71,17 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <button
-                onClick={() => setPage("courses")}
+                onClick={() => setPage("training")}
                 style={{
-                  background: "#FFDE17",
-                  color: "#0F0F0F",
+                  background: "#38D8FC",
+                  color: "#06303C",
                   padding: "15px 26px",
                   borderRadius: 999,
                   fontWeight: 700,
                   fontSize: 16,
                 }}
               >
-                Explore courses →
+                Request a training →
               </button>
               <button
                 onClick={() => setPage("resources")}
@@ -251,8 +251,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
         >
           {[
             {
-              accent: "#9AEEF7",
-              iconBg: "rgba(154,238,247,.14)",
+              accent: "#38D8FC",
+              iconBg: "rgba(56,216,252,.14)",
               icon: "/uploads/tools.png",
               title: "Digital literacy",
               desc: "Use everyday digital tools confidently, protect your accounts and devices, and stay safe and informed online.",
@@ -352,8 +352,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               desc: "Every course, slide deck, toolkit and dataset we publish is freely licensed, so any teacher, journalist or community leader can pick it up and run their own session.",
             },
             {
-              color: "#9AEEF7",
-              bg: "rgba(154,238,247,.1)",
+              color: "#38D8FC",
+              bg: "rgba(56,216,252,.1)",
               icon: "/uploads/impact.png",
               title: "Practical and local",
               desc: "We teach with real Nepali datasets, real Nepali stories and real Nepali examples. Materials are increasingly bilingual in Nepali and English.",
@@ -680,8 +680,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             <button
               onClick={() => setPage("resources")}
               style={{
-                background: "#FFDE17",
-                color: "#0F0F0F",
+                background: "#38D8FC",
+                color: "#06303C",
                 padding: "14px 24px",
                 borderRadius: 999,
                 fontWeight: 700,
@@ -875,7 +875,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 fontWeight: 700,
                 letterSpacing: ".1em",
                 textTransform: "uppercase",
-                color: "#9AEEF7",
+                color: "#38D8FC",
                 marginBottom: 12,
               }}
             >
@@ -918,8 +918,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             <button
               onClick={() => setPage("about")}
               style={{
-                background: "#FFDE17",
-                color: "#0F0F0F",
+                background: "#38D8FC",
+                color: "#06303C",
                 padding: "16px 24px",
                 borderRadius: 14,
                 fontWeight: 700,

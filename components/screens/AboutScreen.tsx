@@ -5,6 +5,14 @@ import { useState } from "react";
 export default function AboutScreen() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
+  const handleSubmit = () => {
+    const subject = encodeURIComponent("Enquiry from OKN School website");
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+    );
+    window.open(`mailto:info@oknp.org?subject=${subject}&body=${body}`);
+  };
+
   return (
     <div className="animate-fade-up">
       {/* About header */}
@@ -70,7 +78,7 @@ export default function AboutScreen() {
           style={{
             aspectRatio: "1/1",
             borderRadius: 24,
-            background: "rgba(154,238,247,.1)",
+            background: "rgba(56,216,252,.1)",
             border: "1px solid #E2E8EB",
             position: "relative",
             overflow: "hidden",
@@ -109,8 +117,8 @@ export default function AboutScreen() {
               desc: "Every course, slide deck, toolkit and dataset we publish is freely licensed, so any teacher, journalist or community leader can pick it up and run their own session.",
             },
             {
-              color: "#9AEEF7",
-              bg: "rgba(154,238,247,.1)",
+              color: "#38D8FC",
+              bg: "rgba(56,216,252,.1)",
               icon: "/uploads/impact.png",
               title: "Practical and local",
               desc: "We teach with real Nepali datasets, real Nepali stories and real Nepali examples. Materials are increasingly bilingual in Nepali and English.",
@@ -203,8 +211,8 @@ export default function AboutScreen() {
                     width: 38,
                     height: 38,
                     borderRadius: 10,
-                    background: "rgba(154,238,247,.18)",
-                    color: "#9AEEF7",
+                    background: "rgba(56,216,252,.18)",
+                    color: "#38D8FC",
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -220,8 +228,8 @@ export default function AboutScreen() {
                     width: 38,
                     height: 38,
                     borderRadius: 10,
-                    background: "rgba(154,238,247,.18)",
-                    color: "#9AEEF7",
+                    background: "rgba(56,216,252,.18)",
+                    color: "#38D8FC",
                     display: "inline-flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -276,9 +284,10 @@ export default function AboutScreen() {
               }}
             />
             <button
+              onClick={handleSubmit}
               style={{
-                background: "#FFDE17",
-                color: "#0F0F0F",
+                background: "#38D8FC",
+                color: "#06303C",
                 padding: 14,
                 borderRadius: 12,
                 fontWeight: 700,

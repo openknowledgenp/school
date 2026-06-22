@@ -276,7 +276,7 @@ export default function ImpactScreen() {
               desc: "Every one of the 8 micro-entrepreneurs mentored in 2026 built a Facebook page and a Google Maps listing, 5 are actively posting, and 2 reported their first ever digital customer inquiries. The Ward Representative signalled interest in incorporating digital training into the local-government budget.",
             },
             {
-              color: "#9AEEF7",
+              color: "#38D8FC",
               icon: "/uploads/governance.png",
               title: "Seed funding catalysed local action",
               desc: "Three Tulsipur teams each received NPR 10,000 at Open Data Day 2021 — covering urban planning, an agricultural-forestry training project and a scholarship database for marginalised children. Six PAHICHAN youth groups received NPR 7,500 to implement action plans across six districts in 2018.",
@@ -294,7 +294,7 @@ export default function ImpactScreen() {
               desc: "Ten women fellows in 2019 grew into the multi-organisation Women in Data Steering Committee, now coordinating an annual conference (held in 2019, 2021, 2022, 2023, 2024 and 2025) that has trained hundreds of women on statistics, mapping, visualization, AI ethics, prompt engineering and digital forensics.",
             },
             {
-              color: "#9AEEF7",
+              color: "#38D8FC",
               icon: "/uploads/press.png",
               title: "Open Data Editor adoption",
               desc: "Our Open Data Editor pilot was selected by Open Knowledge Foundation and our team has demonstrated the tool at Global Voices Summit Bilbao 2024, DRAPAC25 Kuala Lumpur, APrIGF 2025 and inside the CMR Nepal Journalism Academy.",

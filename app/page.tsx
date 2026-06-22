@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HomeScreen from "@/components/screens/HomeScreen";
+import TrainingScreen from "@/components/screens/TrainingScreen";
 import CoursesScreen from "@/components/screens/CoursesScreen";
 import ResourcesScreen from "@/components/screens/ResourcesScreen";
 import ProjectsScreen from "@/components/screens/ProjectsScreen";
@@ -27,6 +28,7 @@ export default function App() {
       <Header page={page} setPage={goTo} />
       <main style={{ flex: 1 }}>
         {page === "home" && <HomeScreen setPage={goTo} />}
+        {page === "training" && <TrainingScreen setPage={goTo} />}
         {page === "courses" && <CoursesScreen />}
         {page === "resources" && <ResourcesScreen />}
         {page === "projects" && <ProjectsScreen />}

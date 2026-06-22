@@ -87,7 +87,7 @@ export default function Header({ page, setPage }: HeaderProps) {
                     right: 0,
                     bottom: -2,
                     height: 3,
-                    background: "#FFDE17",
+                    background: "#38D8FC",
                     borderRadius: 2,
                   }}
                 />
@@ -100,8 +100,8 @@ export default function Header({ page, setPage }: HeaderProps) {
         <button
           onClick={() => setPage("about")}
           style={{
-            background: "#FFDE17",
-            color: "#0F0F0F",
+            background: "#38D8FC",
+            color: "#06303C",
             padding: "11px 20px",
             borderRadius: 999,
             fontWeight: 700,

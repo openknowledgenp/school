@@ -1,4 +1,4 @@
-export type Page = "home" | "courses" | "resources" | "projects" | "impact" | "about";
+export type Page = "home" | "training" | "courses" | "resources" | "projects" | "impact" | "about";
 
 export interface Course {
   tag: string;
@@ -52,11 +52,11 @@ export interface CohortRow {
   cohort: string;
 }
 
-// Colour palette (IOI-inspired)
-// Yellow  #FFDE17  — primary CTA / action
-// Mint    #00CFA3  — data literacy
+// Colour palette
+// Cyan    #38D8FC  — digital literacy / primary CTA
+// Mint    #00CFA3  — data literacy / open data
 // Purple  #717FDA  — AI / gender literacy
-// Sky     #9AEEF7  — digital literacy (IOI --blue)
+// Sky     #9AEEF7  — secondary timeline / project accents
 
 export const COURSES: Course[] = [
   {
@@ -93,7 +93,7 @@ export const COURSES: Course[] = [
   },
   {
     tag: "Digital",
-    color: "#9AEEF7",
+    color: "#38D8FC",
     title: "Digital Security and Online Safety",
     desc: "Practical habits to protect your accounts, devices and personal data online. Covers password hygiene, scam identification, safe use of eSewa and other Nepali fintech apps, and protecting personal information on Facebook and TikTok.",
     level: "Beginner",
@@ -109,7 +109,7 @@ export const COURSES: Course[] = [
   },
   {
     tag: "Digital · Livelihoods",
-    color: "#9AEEF7",
+    color: "#38D8FC",
     title: "Digital Literacy for Tourism Stakeholders",
     desc: "A bilingual 12-module curriculum being built with The Asia Foundation's Digital Samriddhi project for homestay owners, tour guides and cultural groups in Bardiya. Includes Trainer Guides, Learner Workbooks, micro-videos and an offline-first kit for rural settings.",
     level: "Beginner",
@@ -395,24 +395,24 @@ export const COHORTS: CohortRow[] = [
 
 export const ALL_RESOURCES: Resource[] = [
   { type: "Guide", tc: "#00CFA3", title: "Open Data Handbook (Nepali)", topic: "Open Data", fmt: "PDF · 1.2 MB" },
-  { type: "Template", tc: "#9AEEF7", title: "Chart Chooser Cheatsheet", topic: "Data Viz", fmt: "PDF · 320 KB" },
-  { type: "Template", tc: "#9AEEF7", title: "Data Cleaning Checklist", topic: "Open Data", fmt: "PDF · 280 KB" },
+  { type: "Template", tc: "#38D8FC", title: "Chart Chooser Cheatsheet", topic: "Data Viz", fmt: "PDF · 320 KB" },
+  { type: "Template", tc: "#38D8FC", title: "Data Cleaning Checklist", topic: "Open Data", fmt: "PDF · 280 KB" },
   { type: "Toolkit", tc: "#717FDA", title: "AI Literacy Training Pack", topic: "AI", fmt: "PPTX · 4.1 MB" },
   { type: "Toolkit", tc: "#717FDA", title: "Misinformation & AI Reading List", topic: "AI", fmt: "PDF · 210 KB" },
   { type: "Toolkit", tc: "#717FDA", title: "Digital Security Starter Kit", topic: "Digital", fmt: "ZIP · 6.8 MB" },
   { type: "Guide", tc: "#00CFA3", title: "Account Safety Quick Guide", topic: "Digital", fmt: "PDF · 540 KB" },
   { type: "Guide", tc: "#00CFA3", title: "Gender Data Sourcebook", topic: "Gender", fmt: "PDF · 2.3 MB" },
-  { type: "Template", tc: "#9AEEF7", title: "Spreadsheet Formulas Reference", topic: "Data Viz", fmt: "XLSX · 90 KB" },
+  { type: "Template", tc: "#38D8FC", title: "Spreadsheet Formulas Reference", topic: "Data Viz", fmt: "XLSX · 90 KB" },
   { type: "Dataset", tc: "#00CFA3", title: "Local Budget Dataset (sample)", topic: "Open Data", fmt: "CSV · 1.6 MB" },
 ];
 
 export const RESOURCE_TOPICS = ["All", "Open Data", "Data Viz", "AI", "Digital", "Gender"];
 
 export const STATS: Stat[] = [
-  { num: "2,000+", label: "people directly trained", color: "#FFDE17" },
+  { num: "2,000+", label: "people directly trained", color: "#38D8FC" },
   { num: "10+", label: "open resources published", color: "#00CFA3" },
-  { num: "15", label: "districts reached", color: "#9AEEF7" },
-  { num: "6", label: "literacy courses live", color: "#00CFA3" },
+  { num: "15", label: "districts reached", color: "#38D8FC" },
+  { num: "6", label: "literacy courses", color: "#00CFA3" },
 ];
 
 export const PARTNERS = [
@@ -426,8 +426,8 @@ export const PARTNERS = [
 
 export const NAV_ITEMS: { id: Page; label: string }[] = [
   { id: "home", label: "Home" },
+  { id: "training", label: "Training" },
   { id: "courses", label: "Courses" },
-  { id: "resources", label: "Resources" },
   { id: "projects", label: "Projects" },
   { id: "impact", label: "Impact" },
   { id: "about", label: "About" },
