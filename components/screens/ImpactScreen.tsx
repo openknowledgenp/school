@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from "@/components/Img";
 import { STATS, COHORTS } from "@/lib/data";
 
 export default function ImpactScreen() {

@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from "@/components/Img";
 import { COURSES, PROJECTS, STATS, PARTNERS, type Page } from "@/lib/data";
 
 interface HomeScreenProps {

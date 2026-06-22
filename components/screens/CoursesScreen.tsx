@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from "@/components/Img";
 import { COURSES } from "@/lib/data";
 
 export default function CoursesScreen() {

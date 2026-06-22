@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from "@/components/Img";
 import { type Page } from "@/lib/data";
 
 interface FooterProps {
