@@ -210,7 +210,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
       <section style={{ background: "#fff", padding: "88px 0 24px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
           <div style={{ textAlign: "center", maxWidth: "40em", margin: "0 auto 44px" }}>
-            <div className="overline" style={{ color: "#717FDA", marginBottom: 14, justifyContent: "center" }}>
+            <div className="section-label" style={{ color: "#717FDA", marginBottom: 14, justifyContent: "center" }}>
               Our focus
             </div>
             <h2
@@ -309,7 +309,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
       <section style={{ padding: "80px 0 24px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
           <div style={{ textAlign: "center", maxWidth: "38em", margin: "0 auto 40px" }}>
-            <div className="overline" style={{ color: "#00CFA3", marginBottom: 14, justifyContent: "center" }}>
+            <div className="section-label" style={{ color: "#00CFA3", marginBottom: 14, justifyContent: "center" }}>
               Our values
             </div>
             <h2
@@ -383,7 +383,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             }}
           >
             <div>
-              <div className="overline" style={{ color: "#717FDA", marginBottom: 12 }}>
+              <div className="section-label" style={{ color: "#717FDA", marginBottom: 12 }}>
                 What we teach
               </div>
               <h2
@@ -488,7 +488,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             }}
           >
             <div>
-              <div className="overline" style={{ color: "#717FDA", marginBottom: 12 }}>
+              <div className="section-label" style={{ color: "#717FDA", marginBottom: 12 }}>
                 Key projects
               </div>
               <h2
@@ -598,7 +598,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             }}
           >
             <div>
-              <div className="overline" style={{ color: "#717FDA", marginBottom: 14 }}>
+              <div className="section-label" style={{ color: "#717FDA", marginBottom: 14 }}>
                 Open resources
               </div>
               <h2
@@ -691,7 +691,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               }}
             />
             <div style={{ position: "relative" }}>
-              <div className="overline" style={{ color: "#00CFA3", marginBottom: 16 }}>
+              <div className="section-label" style={{ color: "#00CFA3", marginBottom: 16 }}>
                 Why this matters now
               </div>
               <h2
@@ -815,7 +815,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               }}
             />
             <div style={{ position: "relative" }}>
-              <div className="overline" style={{ color: "#38D8FC", marginBottom: 14 }}>
+              <div className="section-label" style={{ color: "#38D8FC", marginBottom: 14 }}>
                 Trainings &amp; workshops
               </div>
               <h2
