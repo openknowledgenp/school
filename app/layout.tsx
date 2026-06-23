@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter, Gloock } from "next/font/google";
+import { Jost, Gloock } from "next/font/google";
 import "./globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const jost = Jost({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-display",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-body",
   display: "swap",
 });
 
@@ -35,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakartaSans.variable} ${inter.variable} ${gloock.variable}`}
+      className={`${jost.variable} ${gloock.variable}`}
     >
       <body>{children}</body>
     </html>

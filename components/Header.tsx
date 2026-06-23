@@ -14,9 +14,10 @@ export default function Header({ page, setPage }: HeaderProps) {
         position: "sticky",
         top: 0,
         zIndex: 50,
-        background: "rgba(244,247,249,0.85)",
-        backdropFilter: "blur(12px)",
-        borderBottom: "1px solid #E2E8EB",
+        background: "rgba(255,255,255,0.94)",
+        backdropFilter: "blur(16px)",
+        borderBottom: "1px solid rgba(0,0,0,0.08)",
+        boxShadow: "0 1px 0 rgba(0,0,0,0.04)",
       }}
     >
       <div
@@ -65,7 +66,7 @@ export default function Header({ page, setPage }: HeaderProps) {
         </button>
 
         {/* Nav */}
-        <nav style={{ display: "flex", alignItems: "center", gap: 30 }}>
+        <nav style={{ display: "flex", alignItems: "center", gap: 32 }}>
           {NAV_ITEMS.map((item) => (
             <button
               key={item.id}
@@ -95,21 +96,6 @@ export default function Header({ page, setPage }: HeaderProps) {
             </button>
           ))}
         </nav>
-
-        {/* CTA */}
-        <button
-          onClick={() => setPage("about")}
-          style={{
-            background: "#38D8FC",
-            color: "#06303C",
-            padding: "11px 20px",
-            borderRadius: 999,
-            fontWeight: 700,
-            fontSize: 14,
-          }}
-        >
-          Get involved
-        </button>
       </div>
     </header>
   );
