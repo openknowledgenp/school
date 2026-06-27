@@ -82,7 +82,7 @@ export default function ProjectsScreen() {
             marginBottom: 12,
           }}
         >
-          Projects
+          Our Work
         </div>
         <h1
           className="font-display"
@@ -92,12 +92,12 @@ export default function ProjectsScreen() {
             letterSpacing: "-0.025em",
           }}
         >
-          Learning, applied in communities
+          Nine years of digital, data and AI literacy
         </h1>
         <p style={{ fontSize: 18, lineHeight: 1.62, color: "#454953", margin: 0 }}>
-          A year-by-year showcase of literacy work led or co-led by Open Knowledge
-          Foundation Nepal between 2018 and 2026 — what we ran, what we produced
-          and who supported it.
+          From a single open-data awareness survey in 2017 to a nationwide programme
+          reaching communities in all seven provinces — a year-by-year record of
+          what we ran, who we reached, and what changed.
         </p>
       </div>
 
@@ -136,6 +136,112 @@ export default function ProjectsScreen() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Where we work + quote */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 20,
+          marginBottom: 44,
+        }}
+      >
+        <div
+          style={{
+            background: "linear-gradient(135deg,#444A82,#15161A)",
+            borderRadius: 24,
+            padding: 36,
+            color: "#fff",
+            position: "relative",
+            overflow: "hidden",
+            minHeight: 260,
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundImage: "radial-gradient(rgba(255,255,255,.2) 1.4px,transparent 1.4px)",
+              backgroundSize: "24px 24px",
+              opacity: 0.5,
+              pointerEvents: "none",
+            }}
+          />
+          <div style={{ position: "relative" }}>
+            <h3 className="font-display" style={{ fontSize: 22, margin: "0 0 8px" }}>
+              Where we work
+            </h3>
+            <p style={{ fontSize: 15, opacity: 0.9, lineHeight: 1.55, margin: "0 0 20px", maxWidth: "28em" }}>
+              In-person trainings and workshops across 15 districts spanning all
+              seven provinces, from Kathmandu to Dadeldhura and Bardiya.
+            </p>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              {[
+                "Kathmandu", "Lalitpur", "Bhaktapur", "Kaski (Pokhara)",
+                "Rupandehi (Butwal)", "Dang", "Parsa (Birgunj)",
+                "Dhanusha (Janakpurdham)", "Sunsari (Itahari)", "Bhojpur",
+                "Banke (Nepalgunj)", "Kanchanpur (Dhangadhi)", "Dadeldhura",
+                "Surkhet (Simta)", "Bardiya",
+              ].map((place) => (
+                <span
+                  key={place}
+                  style={{
+                    background: "rgba(255,255,255,.14)",
+                    borderRadius: 999,
+                    padding: "5px 12px",
+                    fontSize: 12,
+                    fontWeight: 600,
+                  }}
+                >
+                  {place}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            background: "#fff",
+            border: "1px solid #E2E8EB",
+            borderRadius: 24,
+            padding: 36,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            className="font-display"
+            style={{ fontSize: 48, lineHeight: 1, color: "#717FDA", fontWeight: 700 }}
+          >
+            &ldquo;
+          </div>
+          <p
+            className="serif-accent"
+            style={{ fontSize: 22, lineHeight: 1.45, margin: "0 0 20px", letterSpacing: "-0.01em" }}
+          >
+            Before the workshop I was scared of spreadsheets. Now I use open
+            data to back up everything I report.
+          </p>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <div
+              style={{
+                width: 44,
+                height: 44,
+                borderRadius: "50%",
+                background: "linear-gradient(135deg,#00CFA3,#717FDA)",
+              }}
+            />
+            <div>
+              <div style={{ fontWeight: 700, fontSize: 15 }}>Workshop participant</div>
+              <div style={{ fontSize: 13, color: "#828893" }}>
+                Data-a-thon for Journalists · Lalitpur
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Tag filter bar */}

@@ -1,4 +1,4 @@
-export type Page = "home" | "training" | "courses" | "resources" | "projects" | "impact" | "about";
+export type Page = "home" | "training" | "courses" | "resources" | "projects" | "about";
 
 export interface Course {
   tag: string;
@@ -428,7 +428,6 @@ export const NAV_ITEMS: { id: Page; label: string }[] = [
   { id: "home", label: "Home" },
   { id: "training", label: "Training" },
   { id: "courses", label: "Courses" },
-  { id: "projects", label: "Projects" },
-  { id: "impact", label: "Impact" },
+  { id: "projects", label: "Our Work" },
   { id: "about", label: "About" },
 ];

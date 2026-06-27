@@ -7,7 +7,6 @@ import TrainingScreen from "@/components/screens/TrainingScreen";
 import CoursesScreen from "@/components/screens/CoursesScreen";
 import ResourcesScreen from "@/components/screens/ResourcesScreen";
 import ProjectsScreen from "@/components/screens/ProjectsScreen";
-import ImpactScreen from "@/components/screens/ImpactScreen";
 import AboutScreen from "@/components/screens/AboutScreen";
 import { type Page } from "@/lib/data";
 
@@ -28,11 +27,10 @@ export default function App() {
       <Header page={page} setPage={goTo} />
       <main style={{ flex: 1 }}>
         {page === "home" && <HomeScreen setPage={goTo} />}
-        {page === "training" && <TrainingScreen setPage={goTo} />}
+        {page === "training" && <TrainingScreen />}
         {page === "courses" && <CoursesScreen setPage={goTo} />}
         {page === "resources" && <ResourcesScreen />}
         {page === "projects" && <ProjectsScreen />}
-        {page === "impact" && <ImpactScreen />}
         {page === "about" && <AboutScreen />}
       </main>
       <Footer setPage={goTo} />

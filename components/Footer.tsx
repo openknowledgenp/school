@@ -122,13 +122,13 @@ export default function Footer({ setPage }: FooterProps) {
             Explore
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-start" }}>
-            {(["training", "courses", "resources", "projects", "impact"] as Page[]).map((id) => (
+            {(["training", "courses", "resources", "projects"] as Page[]).map((id) => (
               <button
                 key={id}
                 onClick={() => setPage(id)}
                 style={{ fontSize: 14, color: "#9AA0A8", textTransform: "capitalize" }}
               >
-                {id.charAt(0).toUpperCase() + id.slice(1)}
+                {id === "projects" ? "Our Work" : id.charAt(0).toUpperCase() + id.slice(1)}
               </button>
             ))}
           </div>
