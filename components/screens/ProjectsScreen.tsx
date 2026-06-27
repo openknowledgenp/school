@@ -61,7 +61,7 @@ export default function ProjectsScreen() {
       activeTag === "All"
         ? yr.events
         : yr.events.filter((e) => e.tags.includes(activeTag)),
-  })).filter((yr) => yr.events.length > 0);
+  })).filter((yr) => yr.events.length > 0).slice().reverse();
 
   const totalVisible = filtered.reduce((sum, yr) => sum + yr.events.length, 0);
 
@@ -138,108 +138,57 @@ export default function ProjectsScreen() {
         ))}
       </div>
 
-      {/* Where we work + quote */}
+      {/* Where we work */}
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 20,
+          background: "linear-gradient(135deg,#444A82,#15161A)",
+          borderRadius: 24,
+          padding: "36px 40px",
+          color: "#fff",
+          position: "relative",
+          overflow: "hidden",
           marginBottom: 44,
         }}
       >
         <div
           style={{
-            background: "linear-gradient(135deg,#444A82,#15161A)",
-            borderRadius: 24,
-            padding: 36,
-            color: "#fff",
-            position: "relative",
-            overflow: "hidden",
-            minHeight: 260,
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "radial-gradient(rgba(255,255,255,.2) 1.4px,transparent 1.4px)",
+            backgroundSize: "24px 24px",
+            opacity: 0.5,
+            pointerEvents: "none",
           }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundImage: "radial-gradient(rgba(255,255,255,.2) 1.4px,transparent 1.4px)",
-              backgroundSize: "24px 24px",
-              opacity: 0.5,
-              pointerEvents: "none",
-            }}
-          />
-          <div style={{ position: "relative" }}>
-            <h3 className="font-display" style={{ fontSize: 22, margin: "0 0 8px" }}>
-              Where we work
-            </h3>
-            <p style={{ fontSize: 15, opacity: 0.9, lineHeight: 1.55, margin: "0 0 20px", maxWidth: "28em" }}>
-              In-person trainings and workshops across 15 districts spanning all
-              seven provinces, from Kathmandu to Dadeldhura and Bardiya.
-            </p>
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              {[
-                "Kathmandu", "Lalitpur", "Bhaktapur", "Kaski (Pokhara)",
-                "Rupandehi (Butwal)", "Dang", "Parsa (Birgunj)",
-                "Dhanusha (Janakpurdham)", "Sunsari (Itahari)", "Bhojpur",
-                "Banke (Nepalgunj)", "Kanchanpur (Dhangadhi)", "Dadeldhura",
-                "Surkhet (Simta)", "Bardiya",
-              ].map((place) => (
-                <span
-                  key={place}
-                  style={{
-                    background: "rgba(255,255,255,.14)",
-                    borderRadius: 999,
-                    padding: "5px 12px",
-                    fontSize: 12,
-                    fontWeight: 600,
-                  }}
-                >
-                  {place}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div
-          style={{
-            background: "#fff",
-            border: "1px solid #E2E8EB",
-            borderRadius: 24,
-            padding: 36,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            className="font-display"
-            style={{ fontSize: 48, lineHeight: 1, color: "#717FDA", fontWeight: 700 }}
-          >
-            &ldquo;
-          </div>
-          <p
-            className="serif-accent"
-            style={{ fontSize: 22, lineHeight: 1.45, margin: "0 0 20px", letterSpacing: "-0.01em" }}
-          >
-            Before the workshop I was scared of spreadsheets. Now I use open
-            data to back up everything I report.
+        />
+        <div style={{ position: "relative" }}>
+          <h3 className="font-display" style={{ fontSize: 22, margin: "0 0 8px" }}>
+            Where we work
+          </h3>
+          <p style={{ fontSize: 15, opacity: 0.9, lineHeight: 1.55, margin: "0 0 20px", maxWidth: "44em" }}>
+            In-person trainings and workshops across 15 districts spanning all
+            seven provinces, from Kathmandu to Dadeldhura and Bardiya.
           </p>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div
-              style={{
-                width: 44,
-                height: 44,
-                borderRadius: "50%",
-                background: "linear-gradient(135deg,#00CFA3,#717FDA)",
-              }}
-            />
-            <div>
-              <div style={{ fontWeight: 700, fontSize: 15 }}>Workshop participant</div>
-              <div style={{ fontSize: 13, color: "#828893" }}>
-                Data-a-thon for Journalists · Lalitpur
-              </div>
-            </div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {[
+              "Kathmandu", "Lalitpur", "Bhaktapur", "Kaski (Pokhara)",
+              "Rupandehi (Butwal)", "Dang", "Parsa (Birgunj)",
+              "Dhanusha (Janakpurdham)", "Sunsari (Itahari)", "Bhojpur",
+              "Banke (Nepalgunj)", "Kanchanpur (Dhangadhi)", "Dadeldhura",
+              "Surkhet (Simta)", "Bardiya",
+            ].map((place) => (
+              <span
+                key={place}
+                style={{
+                  background: "rgba(255,255,255,.14)",
+                  borderRadius: 999,
+                  padding: "5px 12px",
+                  fontSize: 12,
+                  fontWeight: 600,
+                }}
+              >
+                {place}
+              </span>
+            ))}
           </div>
         </div>
       </div>
