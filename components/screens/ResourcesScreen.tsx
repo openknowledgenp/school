@@ -111,8 +111,9 @@ export default function ResourcesScreen() {
                 {r.fmt}
               </span>
             </div>
-            <button
-              title="Download"
+            <a
+              href={`mailto:info@oknp.org?subject=Resource%20request%3A%20${encodeURIComponent(r.title)}`}
+              title="Request this resource"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -124,10 +125,11 @@ export default function ResourcesScreen() {
                 color: "#fff",
                 fontSize: 18,
                 flexShrink: 0,
+                textDecoration: "none",
               }}
             >
               ↓
-            </button>
+            </a>
           </div>
         ))}
       </div>

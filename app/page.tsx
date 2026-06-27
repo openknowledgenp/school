@@ -29,7 +29,7 @@ export default function App() {
       <main style={{ flex: 1 }}>
         {page === "home" && <HomeScreen setPage={goTo} />}
         {page === "training" && <TrainingScreen setPage={goTo} />}
-        {page === "courses" && <CoursesScreen />}
+        {page === "courses" && <CoursesScreen setPage={goTo} />}
         {page === "resources" && <ResourcesScreen />}
         {page === "projects" && <ProjectsScreen />}
         {page === "impact" && <ImpactScreen />}

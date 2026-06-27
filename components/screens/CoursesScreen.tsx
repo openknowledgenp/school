@@ -1,8 +1,12 @@
 "use client";
 import Image from "@/components/Img";
-import { COURSES } from "@/lib/data";
+import { COURSES, type Page } from "@/lib/data";
 
-export default function CoursesScreen() {
+interface CoursesScreenProps {
+  setPage: (p: Page) => void;
+}
+
+export default function CoursesScreen({ setPage }: CoursesScreenProps) {
   return (
     <div
       className="animate-fade-up"
@@ -152,9 +156,12 @@ export default function CoursesScreen() {
                   {c.level} · {c.modules}
                 </span>
                 {!c.status && (
-                  <span style={{ fontWeight: 700, color: "#717FDA", fontSize: 14 }}>
+                  <button
+                    onClick={() => setPage("training")}
+                    style={{ fontWeight: 700, color: "#717FDA", fontSize: 14 }}
+                  >
                     Start →
-                  </span>
+                  </button>
                 )}
               </div>
             </div>

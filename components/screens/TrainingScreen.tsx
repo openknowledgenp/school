@@ -619,7 +619,7 @@ export default function TrainingScreen({ setPage }: TrainingScreenProps) {
                 &ldquo;
               </div>
               <p
-                className="font-serif"
+                className="serif-accent"
                 style={{
                   fontSize: 17,
                   lineHeight: 1.5,
@@ -676,6 +676,7 @@ export default function TrainingScreen({ setPage }: TrainingScreenProps) {
                 "radial-gradient(rgba(255,255,255,.18) 1.5px,transparent 1.5px)",
               backgroundSize: "26px 26px",
               opacity: 0.4,
+              pointerEvents: "none",
             }}
           />
           <div style={{ position: "relative" }}>

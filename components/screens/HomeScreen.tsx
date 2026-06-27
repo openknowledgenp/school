@@ -42,8 +42,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 fontWeight: 800,
               }}
             >
-              Digital, Data &amp;{" "}
-              <span style={{ color: "#717FDA" }}>AI Literacy</span>{" "}
+              Digital, data and{" "}
+              <span style={{ color: "#717FDA" }}>AI literacy</span>{" "}
               for everyone in Nepal
             </h1>
             <p
@@ -55,10 +55,10 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 margin: "0 0 28px",
               }}
             >
-              For over a decade, Open Knowledge Foundation Nepal has helped
-              youth, women, journalists, civil society and governments to work
-              with data confidently, use digital tools safely, and engage with
-              artificial intelligence critically.
+              Since 2013, Open Knowledge Foundation Nepal has trained youth,
+              women, journalists, civil society and government staff to work
+              with data confidently, use digital tools safely, and approach AI
+              critically.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <button
@@ -224,9 +224,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             >
               Three literacies, one mission
             </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.65, color: "#5A636B", margin: 0 }}>
-              Everything we make builds capability across three connected areas,
-              so people can work with information confidently and responsibly.
+            <p style={{ fontSize: 16, lineHeight: 1.65, color: "#5A636B", margin: 0 }}>
+              Our work spans three connected skills, each one people can put to use right away.
             </p>
           </div>
 
@@ -237,8 +236,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 iconBg: "rgba(56,216,252,.12)",
                 icon: "/uploads/tools.png",
                 title: "Digital literacy",
-                desc: "Use everyday digital tools confidently, protect your accounts and devices, and stay safe and informed online.",
-                tags: "Digital Security · Online Safety · Practical Productivity Tools",
+                desc: "Use everyday digital tools with confidence, protect your accounts and devices, and stay safe online.",
+                tags: "Digital Security · Online Safety · Productivity Tools",
               },
               {
                 accent: "#00CFA3",
@@ -253,8 +252,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 iconBg: "rgba(113,127,218,.12)",
                 icon: "/uploads/knowledge.png",
                 title: "AI literacy",
-                desc: "Understand what AI can and cannot do, spot its risks, and use it critically, ethically and responsibly.",
-                tags: "Prompting · AI Safety · Verification Habits · Tackling Misinformation",
+                desc: "Understand what AI can and cannot do, spot its risks, and use it critically and ethically.",
+                tags: "Prompting · AI Safety · Verification · Tackling Misinformation",
               },
             ].map((card) => (
               <div
@@ -305,72 +304,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
         </div>
       </section>
 
-      {/* ── Our values ────────────────────────────────────────────── */}
-      <section style={{ padding: "80px 0 24px" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
-          <div style={{ textAlign: "center", maxWidth: "38em", margin: "0 auto 40px" }}>
-            <div className="section-label" style={{ color: "#00CFA3", marginBottom: 14, justifyContent: "center" }}>
-              Our values
-            </div>
-            <h2
-              className="font-display"
-              style={{ fontSize: "clamp(26px,3.2vw,40px)", margin: 0, letterSpacing: "-0.025em", fontWeight: 700 }}
-            >
-              How we work
-            </h2>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 22 }}>
-            {[
-              {
-                color: "#00CFA3",
-                bg: "rgba(0,207,163,.1)",
-                icon: "/uploads/mission.png",
-                title: "Open by default",
-                desc: "Every course, slide deck, toolkit and dataset we publish is freely licensed, so any teacher, journalist or community leader can pick it up and run their own session.",
-              },
-              {
-                color: "#38D8FC",
-                bg: "rgba(56,216,252,.1)",
-                icon: "/uploads/impact.png",
-                title: "Practical and local",
-                desc: "We teach with real Nepali datasets, real Nepali stories and real Nepali examples. Materials are increasingly bilingual in Nepali and English.",
-              },
-              {
-                color: "#717FDA",
-                bg: "rgba(113,127,218,.1)",
-                icon: "/uploads/connect-community.png",
-                title: "Inclusive community",
-                desc: "We focus on people often left out of data and tech conversations — women, youth outside the Valley, persons with disabilities and underserved local governments.",
-              },
-            ].map((v) => (
-              <div key={v.title} style={{ ...CARD, borderRadius: 20, padding: 28 }}>
-                <div
-                  style={{
-                    width: 56,
-                    height: 56,
-                    borderRadius: 16,
-                    background: v.bg,
-                    marginBottom: 18,
-                    position: "relative",
-                    overflow: "hidden",
-                  }}
-                >
-                  <Image src={v.icon} alt="" fill style={{ objectFit: "contain", padding: 9 }} />
-                </div>
-                <h4 className="font-display" style={{ margin: "0 0 10px", fontSize: 19, fontWeight: 700 }}>
-                  {v.title}
-                </h4>
-                <p style={{ margin: 0, fontSize: 15, color: "#5A636B", lineHeight: 1.65 }}>
-                  {v.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Featured courses ──────────────────────────────────────── */}
-      <section style={{ background: "#fff", padding: "80px 0 24px" }}>
+      <section style={{ padding: "80px 0 24px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
           <div
             style={{
@@ -390,7 +325,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 className="font-display"
                 style={{
                   fontSize: "clamp(28px,3.6vw,42px)",
-                  margin: 0,
+                  margin: "0 0 10px",
                   letterSpacing: "-0.025em",
                   fontWeight: 700,
                   maxWidth: "16em",
@@ -398,6 +333,9 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               >
                 Skills you can start using right away
               </h2>
+              <p style={{ fontSize: 15, color: "#5A636B", margin: 0, lineHeight: 1.6 }}>
+                Short, practical courses built from a decade of training rooms across Nepal.
+              </p>
             </div>
             <button
               onClick={() => setPage("courses")}
@@ -474,6 +412,70 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
         </div>
       </section>
 
+      {/* ── Our values ────────────────────────────────────────────── */}
+      <section style={{ background: "#fff", padding: "80px 0 24px" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
+          <div style={{ textAlign: "center", maxWidth: "38em", margin: "0 auto 40px" }}>
+            <div className="section-label" style={{ color: "#00CFA3", marginBottom: 14, justifyContent: "center" }}>
+              Our values
+            </div>
+            <h2
+              className="font-display"
+              style={{ fontSize: "clamp(26px,3.2vw,40px)", margin: 0, letterSpacing: "-0.025em", fontWeight: 700 }}
+            >
+              How we work
+            </h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 22 }}>
+            {[
+              {
+                color: "#00CFA3",
+                bg: "rgba(0,207,163,.1)",
+                icon: "/uploads/mission.png",
+                title: "Open by default",
+                desc: "Every course, slide deck, toolkit and dataset we publish is freely licensed, so any teacher, journalist or community leader can pick it up and run their own session.",
+              },
+              {
+                color: "#38D8FC",
+                bg: "rgba(56,216,252,.1)",
+                icon: "/uploads/impact.png",
+                title: "Practical and local",
+                desc: "We teach with real Nepali datasets, real Nepali stories and real Nepali examples. Materials are increasingly bilingual in Nepali and English.",
+              },
+              {
+                color: "#717FDA",
+                bg: "rgba(113,127,218,.1)",
+                icon: "/uploads/connect-community.png",
+                title: "Inclusive community",
+                desc: "We focus on people often left out of data and tech conversations — women, youth outside the Valley, persons with disabilities and underserved local governments.",
+              },
+            ].map((v) => (
+              <div key={v.title} style={{ ...CARD, borderRadius: 20, padding: 28 }}>
+                <div
+                  style={{
+                    width: 56,
+                    height: 56,
+                    borderRadius: 16,
+                    background: v.bg,
+                    marginBottom: 18,
+                    position: "relative",
+                    overflow: "hidden",
+                  }}
+                >
+                  <Image src={v.icon} alt="" fill style={{ objectFit: "contain", padding: 9 }} />
+                </div>
+                <h4 className="font-display" style={{ margin: "0 0 10px", fontSize: 19, fontWeight: 700 }}>
+                  {v.title}
+                </h4>
+                <p style={{ margin: 0, fontSize: 15, color: "#5A636B", lineHeight: 1.65 }}>
+                  {v.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Featured projects ─────────────────────────────────────── */}
       <section style={{ padding: "80px 0 24px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
@@ -521,7 +523,6 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 <div
                   style={{
                     aspectRatio: "16/7",
-                    background: p.color + "14",
                     position: "relative",
                     overflow: "hidden",
                     borderBottom: `3px solid ${p.color}`,
@@ -531,7 +532,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                     src={p.illustration}
                     alt={p.title}
                     fill
-                    style={{ objectFit: "contain", padding: "16px 28px" }}
+                    style={{ objectFit: "cover" }}
                   />
                   <span
                     style={{
@@ -666,88 +667,8 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
         </div>
       </section>
 
-      {/* ── Why this matters now ──────────────────────────────────── */}
-      <section style={{ padding: "80px 0 24px" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
-          <div
-            style={{
-              background: "linear-gradient(135deg,#053830,#15161A)",
-              borderRadius: 28,
-              padding: "52px 52px",
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 52,
-              alignItems: "center",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                backgroundImage: "radial-gradient(rgba(0,207,163,.15) 1.5px,transparent 1.5px)",
-                backgroundSize: "28px 28px",
-              }}
-            />
-            <div style={{ position: "relative" }}>
-              <div className="section-label" style={{ color: "#00CFA3", marginBottom: 16 }}>
-                Why this matters now
-              </div>
-              <h2
-                className="font-display"
-                style={{
-                  fontSize: "clamp(24px,3vw,36px)",
-                  margin: "0 0 18px",
-                  letterSpacing: "-0.025em",
-                  fontWeight: 700,
-                  color: "#fff",
-                }}
-              >
-                Nepal is digitising fast but unevenly
-              </h2>
-              <p style={{ fontSize: 16, lineHeight: 1.7, color: "rgba(255,255,255,0.78)", margin: 0 }}>
-                Citizens encounter spreadsheets they cannot read, AI chatbots they
-                cannot verify, and online platforms that put their savings and
-                reputations at risk. Our work closes that gap.
-              </p>
-            </div>
-            <div style={{ position: "relative", display: "flex", flexDirection: "column", gap: 14 }}>
-              {[
-                { stat: "76.1%", text: "of Nepali youths had never heard of open data (2017 OKN baseline survey)" },
-                { stat: "8 of 8", text: "micro-enterprises in Dhangadhi got online after our 2026 Digital Roadmaps programme" },
-                { stat: "15 districts", text: "reached with in-person training, from Kathmandu to Bardiya and Dadeldhura" },
-              ].map((item) => (
-                <div
-                  key={item.stat}
-                  style={{
-                    background: "rgba(255,255,255,0.07)",
-                    borderRadius: 14,
-                    padding: "16px 20px",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 16,
-                    border: "1px solid rgba(255,255,255,0.1)",
-                  }}
-                >
-                  <div
-                    className="font-display"
-                    style={{ fontSize: 22, fontWeight: 800, color: "#00CFA3", whiteSpace: "nowrap" }}
-                  >
-                    {item.stat}
-                  </div>
-                  <div style={{ fontSize: 14, color: "rgba(255,255,255,0.75)", lineHeight: 1.5 }}>
-                    {item.text}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Partners ──────────────────────────────────────────────── */}
-      <section style={{ background: "#fff", padding: "72px 0 24px" }}>
+      <section style={{ padding: "72px 0 24px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", textAlign: "center" }}>
           <div
             style={{
@@ -812,6 +733,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 backgroundImage: "radial-gradient(rgba(255,255,255,.14) 1.5px,transparent 1.5px)",
                 backgroundSize: "26px 26px",
                 opacity: 0.6,
+                pointerEvents: "none",
               }}
             />
             <div style={{ position: "relative" }}>
@@ -838,9 +760,9 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                   maxWidth: "34em",
                 }}
               >
-                We run tailored digital, data and AI literacy trainings and
-                workshops for schools, newsrooms, governments and civil society.
-                We can deliver in English, Nepali or both.
+                We run tailored digital, data and AI literacy trainings for
+                education institutions, newsrooms, governments and civil society,
+                in English, Nepali or both.
               </p>
             </div>
 

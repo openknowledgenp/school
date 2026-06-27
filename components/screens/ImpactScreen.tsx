@@ -100,6 +100,7 @@ export default function ImpactScreen() {
                 "radial-gradient(rgba(255,255,255,.2) 1.4px,transparent 1.4px)",
               backgroundSize: "24px 24px",
               opacity: 0.5,
+              pointerEvents: "none",
             }}
           />
           <div style={{ position: "relative" }}>
@@ -162,7 +163,7 @@ export default function ImpactScreen() {
             &ldquo;
           </div>
           <p
-            className="font-serif"
+            className="serif-accent"
             style={{ fontSize: 22, lineHeight: 1.45, margin: "0 0 20px", letterSpacing: "-0.01em" }}
           >
             Before the workshop I was scared of spreadsheets. Now I use open
