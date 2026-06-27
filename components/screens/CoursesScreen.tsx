@@ -14,9 +14,8 @@ export default function CoursesScreen({ setPage }: CoursesScreenProps) {
     >
       {/* Header row */}
       <div
+        className="rg-crs-hd"
         style={{
-          display: "grid",
-          gridTemplateColumns: "1fr auto",
           gap: 48,
           alignItems: "center",
           marginBottom: 44,
@@ -54,6 +53,7 @@ export default function CoursesScreen({ setPage }: CoursesScreenProps) {
           </p>
         </div>
         <div
+          className="mobile-hidden"
           style={{
             width: 180,
             height: 180,
@@ -72,7 +72,7 @@ export default function CoursesScreen({ setPage }: CoursesScreenProps) {
 
       {/* Course grid */}
       <div
-        style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 22 }}
+        className="rg-3" style={{ gap: 22 }}
       >
         {COURSES.map((c) => (
           <div
@@ -171,14 +171,13 @@ export default function CoursesScreen({ setPage }: CoursesScreenProps) {
 
       {/* How to use these courses */}
       <div
+        className="rg-3"
         style={{
           marginTop: 48,
           background: "#fff",
           border: "1px solid #E2E8EB",
           borderRadius: 24,
           padding: 40,
-          display: "grid",
-          gridTemplateColumns: "repeat(3,1fr)",
           gap: 32,
         }}
       >

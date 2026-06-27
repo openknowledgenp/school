@@ -67,7 +67,7 @@ export default function ResourcesScreen() {
       </div>
 
       {/* Resource cards */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 18 }}>
+      <div className="rg-2" style={{ gap: 18 }}>
         {filtered.map((r) => (
           <div
             key={r.title}

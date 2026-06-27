@@ -97,12 +97,11 @@ export default function TrainingScreen() {
       {/* ── Hero — white ─────────────────────────────────────────── */}
       <section style={{ background: "#fff", padding: "68px 0 80px" }}>
         <div
+          className="rg-2"
           style={{
             maxWidth: 1180,
             margin: "0 auto",
             padding: "0 28px",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
             gap: 56,
             alignItems: "center",
           }}
@@ -164,6 +163,7 @@ export default function TrainingScreen() {
           </div>
 
           <div
+            className="mobile-hidden"
             style={{
               aspectRatio: "4/3",
               borderRadius: 24,
@@ -210,7 +210,7 @@ export default function TrainingScreen() {
               Training formats
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
+          <div className="rg-3" style={{ gap: 20 }}>
             {FORMATS.map((f) => (
               <div
                 key={f.title}
@@ -277,7 +277,7 @@ export default function TrainingScreen() {
               We train across sectors
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 20 }}>
+          <div className="rg-4" style={{ gap: 20 }}>
             {AUDIENCES.map((a) => (
               <div
                 key={a.title}
@@ -318,14 +318,13 @@ export default function TrainingScreen() {
       <section style={{ padding: "80px 0 24px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
           <div
+            className="rg-topics"
             style={{
               background: "#fff",
               border: "1px solid rgba(0,0,0,0.06)",
               boxShadow: "0 1px 2px rgba(0,0,0,0.04),0 4px 16px rgba(0,0,0,0.05)",
               borderRadius: 24,
               padding: "36px 40px",
-              display: "grid",
-              gridTemplateColumns: "1fr 2fr",
               gap: 40,
               alignItems: "center",
             }}
@@ -387,13 +386,12 @@ export default function TrainingScreen() {
       >
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
           <div
+            className="rg-2"
             style={{
               background: "linear-gradient(120deg,#39406E,#15161A)",
               borderRadius: 28,
               padding: "52px 48px",
               color: "#fff",
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
               gap: 48,
               position: "relative",
               overflow: "hidden",

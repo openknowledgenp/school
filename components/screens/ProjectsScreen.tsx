@@ -103,9 +103,8 @@ export default function ProjectsScreen() {
 
       {/* Summary stats */}
       <div
+        className="rg-4"
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
           gap: 16,
           marginBottom: 44,
         }}

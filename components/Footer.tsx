@@ -10,12 +10,11 @@ export default function Footer({ setPage }: FooterProps) {
   return (
     <footer style={{ background: "#1A1F3D", color: "#fff" }}>
       <div
+        className="rg-footer"
         style={{
           maxWidth: 1180,
           margin: "0 auto",
           padding: "56px 28px 32px",
-          display: "grid",
-          gridTemplateColumns: "1.6fr 1fr 1fr 1fr",
           gap: 36,
         }}
       >

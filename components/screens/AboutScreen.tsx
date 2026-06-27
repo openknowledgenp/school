@@ -19,12 +19,11 @@ export default function AboutScreen() {
       {/* ── About us — white ─────────────────────────────────────── */}
       <section style={{ background: "#fff", padding: "68px 0 80px" }}>
         <div
+          className="rg-2"
           style={{
             maxWidth: 1180,
             margin: "0 auto",
             padding: "0 28px",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
             gap: 56,
             alignItems: "center",
           }}
@@ -69,6 +68,7 @@ export default function AboutScreen() {
           </div>
 
           <div
+            className="mobile-hidden"
             style={{
               aspectRatio: "1/1",
               borderRadius: 24,
@@ -130,7 +130,7 @@ export default function AboutScreen() {
             English. And we maintain open infrastructure — public data platforms
             and tools that put real Nepali data within everyone&apos;s reach.
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
+          <div className="rg-3" style={{ gap: 20 }}>
             {[
               {
                 color: "#38D8FC",
@@ -214,7 +214,7 @@ export default function AboutScreen() {
           >
             Our values
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
+          <div className="rg-3" style={{ gap: 20 }}>
             {[
               {
                 color: "#00CFA3",
@@ -277,13 +277,12 @@ export default function AboutScreen() {
       <section style={{ padding: "80px 0" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
           <div
+            className="rg-2"
             style={{
               background: "linear-gradient(120deg,#39406E,#15161A)",
               borderRadius: 28,
               padding: "52px 56px",
               color: "#fff",
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
               gap: 56,
               alignItems: "center",
               position: "relative",
@@ -373,13 +372,12 @@ export default function AboutScreen() {
       <section style={{ padding: "0 0 96px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
           <div
+            className="rg-2"
             style={{
               background: "#15161A",
               borderRadius: 28,
               padding: "52px 48px",
               color: "#fff",
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
               gap: 48,
             }}
           >

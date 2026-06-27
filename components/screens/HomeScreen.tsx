@@ -21,12 +21,11 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden" }}>
         <div
+          className="rg-hero"
           style={{
             maxWidth: 1180,
             margin: "0 auto",
             padding: "68px 28px 84px",
-            display: "grid",
-            gridTemplateColumns: "1.05fr 0.95fr",
             gap: 56,
             alignItems: "center",
           }}
@@ -93,7 +92,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
           </div>
 
           {/* Hero visual */}
-          <div style={{ position: "relative" }}>
+          <div className="mobile-hidden" style={{ position: "relative" }}>
             <div
               style={{
                 position: "relative",
@@ -167,12 +166,11 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
       {/* ── Stats bar ─────────────────────────────────────────────── */}
       <section style={{ background: "#00CFA3" }}>
         <div
+          className="rg-4"
           style={{
             maxWidth: 1180,
             margin: "0 auto",
             padding: "48px 28px",
-            display: "grid",
-            gridTemplateColumns: "repeat(4,1fr)",
             gap: 24,
           }}
         >
@@ -229,7 +227,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="rg-3" style={{ gap: 24 }}>
             {[
               {
                 accent: "#38D8FC",
@@ -345,7 +343,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             </button>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 20 }}>
+          <div className="rg-4" style={{ gap: 20 }}>
             {featured.map((c) => (
               <div
                 key={c.title}
@@ -426,7 +424,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               How we work
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 22 }}>
+          <div className="rg-3" style={{ gap: 22 }}>
             {[
               {
                 color: "#00CFA3",
@@ -508,7 +506,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             </button>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 24 }}>
+          <div className="rg-2" style={{ gap: 24 }}>
             {featuredProjects.map((p) => (
               <div
                 key={p.title}
@@ -588,12 +586,11 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
       <section style={{ background: "#fff", padding: "80px 0 24px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
           <div
+            className="rg-2"
             style={{
               ...CARD,
               borderRadius: 28,
               padding: "44px 48px",
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
               gap: 48,
               alignItems: "center",
             }}
@@ -682,7 +679,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
           >
             Partners &amp; funders
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(6,1fr)", gap: 14 }}>
+          <div className="rg-6" style={{ gap: 14 }}>
             {PARTNERS.map((name) => (
               <div
                 key={name}
@@ -713,6 +710,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
       <section style={{ padding: "72px 0 96px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px" }}>
           <div
+            className="rg-hero-cta"
             style={{
               background: "linear-gradient(120deg,#39406E,#15161A)",
               borderRadius: 28,
@@ -720,8 +718,6 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               color: "#fff",
               position: "relative",
               overflow: "hidden",
-              display: "grid",
-              gridTemplateColumns: "1.2fr 0.8fr",
               gap: 40,
               alignItems: "center",
             }}
