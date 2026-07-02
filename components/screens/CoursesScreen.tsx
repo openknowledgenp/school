@@ -1,10 +1,8 @@
 "use client";
 import Image from "@/components/Img";
-import { useRouter } from "next/navigation";
 import { COURSES } from "@/lib/data";
 
 export default function CoursesScreen() {
-  const router = useRouter();
   return (
     <div
       className="animate-fade-up"
@@ -143,9 +141,6 @@ export default function CoursesScreen() {
               </p>
               <div
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
                   paddingTop: 6,
                   borderTop: "1px solid #E7EEF0",
                 }}
@@ -153,14 +148,6 @@ export default function CoursesScreen() {
                 <span style={{ fontSize: 13, color: "#828893", fontWeight: 600 }}>
                   {c.level} · {c.modules}
                 </span>
-                {!c.status && (
-                  <button
-                    onClick={() => router.push("/training")}
-                    style={{ fontWeight: 700, color: "#717FDA", fontSize: 14 }}
-                  >
-                    Start →
-                  </button>
-                )}
               </div>
             </div>
           </div>
