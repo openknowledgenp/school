@@ -1,20 +1,13 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "@/components/Img";
-import { NAV_ITEMS, type Page } from "@/lib/data";
+import { NAV_ITEMS } from "@/lib/data";
 
-interface HeaderProps {
-  page: Page;
-  setPage: (p: Page) => void;
-}
-
-export default function Header({ page, setPage }: HeaderProps) {
+export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const goTo = (p: Page) => {
-    setPage(p);
-    setMenuOpen(false);
-  };
+  const pathname = usePathname();
 
   return (
     <>
@@ -42,9 +35,9 @@ export default function Header({ page, setPage }: HeaderProps) {
           }}
         >
           {/* Logo */}
-          <button
-            onClick={() => goTo("home")}
-            style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0 }}
+          <Link
+            href="/"
+            style={{ display: "flex", alignItems: "center", gap: 14, flexShrink: 0, textDecoration: "none" }}
           >
             <Image
               src="/assets/okf-nepal-logo.png"
@@ -72,24 +65,26 @@ export default function Header({ page, setPage }: HeaderProps) {
                 &amp; AI Literacy
               </span>
             </span>
-          </button>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="nav-desktop" style={{ alignItems: "center", gap: 28 }}>
             {NAV_ITEMS.map((item) => (
-              <button
+              <Link
                 key={item.id}
-                onClick={() => goTo(item.id)}
+                href={item.href}
                 style={{
                   position: "relative",
                   fontWeight: 500,
                   fontSize: 15,
                   color: "#15161A",
                   padding: "6px 0",
+                  textDecoration: "none",
+                  display: "inline-block",
                 }}
               >
                 {item.label}
-                {page === item.id && (
+                {pathname === item.href && (
                   <span
                     style={{
                       position: "absolute",
@@ -102,7 +97,7 @@ export default function Header({ page, setPage }: HeaderProps) {
                     }}
                   />
                 )}
-              </button>
+              </Link>
             ))}
           </nav>
 
@@ -180,9 +175,10 @@ export default function Header({ page, setPage }: HeaderProps) {
           }}
         >
           {NAV_ITEMS.map((item) => (
-            <button
+            <Link
               key={item.id}
-              onClick={() => goTo(item.id)}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
               style={{
                 display: "flex",
                 justifyContent: "space-between",
@@ -191,15 +187,16 @@ export default function Header({ page, setPage }: HeaderProps) {
                 textAlign: "left",
                 padding: "18px 0",
                 borderBottom: "1px solid rgba(0,0,0,0.07)",
-                fontWeight: page === item.id ? 700 : 500,
+                fontWeight: pathname === item.href ? 700 : 500,
                 fontSize: 20,
-                color: page === item.id ? "#38D8FC" : "#15161A",
+                color: pathname === item.href ? "#38D8FC" : "#15161A",
                 fontFamily: "var(--font-display), system-ui, sans-serif",
+                textDecoration: "none",
               }}
             >
               {item.label}
               <span style={{ fontSize: 18, opacity: 0.3 }}>→</span>
-            </button>
+            </Link>
           ))}
 
           <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 10 }}>
@@ -213,6 +210,7 @@ export default function Header({ page, setPage }: HeaderProps) {
                 fontWeight: 700,
                 fontSize: 16,
                 textAlign: "center",
+                textDecoration: "none",
               }}
             >
               Contact us →

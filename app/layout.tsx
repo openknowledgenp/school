@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Jost, Gloock } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -17,7 +19,10 @@ const gloock = Gloock({
 });
 
 export const metadata: Metadata = {
-  title: "OKN Course Hub | Digital, Data & AI Literacy for Nepal",
+  title: {
+    template: "School of Data | %s",
+    default: "School of Data",
+  },
   description:
     "Open Knowledge Foundation Nepal builds practical skills to find, understand and use data through free courses, hands-on resources and community projects.",
 };
@@ -30,7 +35,13 @@ export default function RootLayout({
       lang="en"
       className={`${jost.variable} ${gloock.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+          <Header />
+          <main style={{ flex: 1 }}>{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

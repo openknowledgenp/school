@@ -1,10 +1,7 @@
 "use client";
 import Image from "@/components/Img";
-import { COURSES, PROJECTS, STATS, PARTNERS, type Page } from "@/lib/data";
-
-interface HomeScreenProps {
-  setPage: (p: Page) => void;
-}
+import { useRouter } from "next/navigation";
+import { COURSES, PROJECTS, STATS, PARTNERS } from "@/lib/data";
 
 const CARD: React.CSSProperties = {
   background: "#fff",
@@ -12,7 +9,8 @@ const CARD: React.CSSProperties = {
   boxShadow: "0 1px 2px rgba(0,0,0,0.04),0 4px 16px rgba(0,0,0,0.05)",
 };
 
-export default function HomeScreen({ setPage }: HomeScreenProps) {
+export default function HomeScreen() {
+  const router = useRouter();
   const featured = COURSES.slice(0, 4);
   const featuredProjects = PROJECTS.slice(0, 2);
 
@@ -61,7 +59,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <button
-                onClick={() => setPage("training")}
+                onClick={() => router.push("/training")}
                 style={{
                   background: "#38D8FC",
                   color: "#06303C",
@@ -75,7 +73,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 Request a training →
               </button>
               <button
-                onClick={() => setPage("resources")}
+                onClick={() => router.push("/resources")}
                 style={{
                   background: "transparent",
                   border: "1.5px solid #15161A",
@@ -336,7 +334,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               </p>
             </div>
             <button
-              onClick={() => setPage("courses")}
+              onClick={() => router.push("/courses")}
               style={{ fontWeight: 700, color: "#717FDA", fontSize: 15, whiteSpace: "nowrap" }}
             >
               All courses →
@@ -499,7 +497,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
               </h2>
             </div>
             <button
-              onClick={() => setPage("projects")}
+              onClick={() => router.push("/our-work")}
               style={{ fontWeight: 700, color: "#717FDA", fontSize: 15, whiteSpace: "nowrap" }}
             >
               All projects →
@@ -622,7 +620,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
                 train and run your own data and digital literacy sessions.
               </p>
               <button
-                onClick={() => setPage("resources")}
+                onClick={() => router.push("/resources")}
                 style={{
                   background: "#38D8FC",
                   color: "#06303C",
@@ -764,7 +762,7 @@ export default function HomeScreen({ setPage }: HomeScreenProps) {
 
             <div style={{ position: "relative", display: "flex", flexDirection: "column", gap: 12 }}>
               <button
-                onClick={() => setPage("about")}
+                onClick={() => router.push("/about")}
                 style={{
                   background: "#38D8FC",
                   color: "#06303C",

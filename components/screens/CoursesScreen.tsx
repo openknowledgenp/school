@@ -1,12 +1,10 @@
 "use client";
 import Image from "@/components/Img";
-import { COURSES, type Page } from "@/lib/data";
+import { useRouter } from "next/navigation";
+import { COURSES } from "@/lib/data";
 
-interface CoursesScreenProps {
-  setPage: (p: Page) => void;
-}
-
-export default function CoursesScreen({ setPage }: CoursesScreenProps) {
+export default function CoursesScreen() {
+  const router = useRouter();
   return (
     <div
       className="animate-fade-up"
@@ -157,7 +155,7 @@ export default function CoursesScreen({ setPage }: CoursesScreenProps) {
                 </span>
                 {!c.status && (
                   <button
-                    onClick={() => setPage("training")}
+                    onClick={() => router.push("/training")}
                     style={{ fontWeight: 700, color: "#717FDA", fontSize: 14 }}
                   >
                     Start →

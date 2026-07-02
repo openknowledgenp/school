@@ -1,12 +1,15 @@
 "use client";
+import Link from "next/link";
 import Image from "@/components/Img";
-import { type Page } from "@/lib/data";
 
-interface FooterProps {
-  setPage: (p: Page) => void;
-}
+const EXPLORE_LINKS = [
+  { href: "/training", label: "Training" },
+  { href: "/courses", label: "Courses" },
+  { href: "/resources", label: "Resources" },
+  { href: "/our-work", label: "Our Work" },
+];
 
-export default function Footer({ setPage }: FooterProps) {
+export default function Footer() {
   return (
     <footer style={{ background: "#1A1F3D", color: "#fff" }}>
       <div
@@ -121,14 +124,14 @@ export default function Footer({ setPage }: FooterProps) {
             Explore
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-start" }}>
-            {(["training", "courses", "resources", "projects"] as Page[]).map((id) => (
-              <button
-                key={id}
-                onClick={() => setPage(id)}
-                style={{ fontSize: 14, color: "#9AA0A8", textTransform: "capitalize" }}
+            {EXPLORE_LINKS.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                style={{ fontSize: 14, color: "#9AA0A8", textDecoration: "none" }}
               >
-                {id === "projects" ? "Our Work" : id.charAt(0).toUpperCase() + id.slice(1)}
-              </button>
+                {label}
+              </Link>
             ))}
           </div>
         </div>
@@ -142,13 +145,13 @@ export default function Footer({ setPage }: FooterProps) {
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-start" }}>
             {(["About us", "Contact", "Get involved"] as const).map((label) => (
-              <button
+              <Link
                 key={label}
-                onClick={() => setPage("about")}
-                style={{ fontSize: 14, color: "#9AA0A8" }}
+                href="/about"
+                style={{ fontSize: 14, color: "#9AA0A8", textDecoration: "none" }}
               >
                 {label}
-              </button>
+              </Link>
             ))}
           </div>
         </div>

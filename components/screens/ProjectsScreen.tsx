@@ -46,10 +46,10 @@ const ALL_FILTER_TAGS = [
 ];
 
 const SUMMARY_STATS = [
-  { num: "40+", label: "programmes & events", color: "#38D8FC" },
-  { num: "9", label: "years of work (2018–2026)", color: "#717FDA" },
+  { num: "25+", label: "programmes & events", color: "#38D8FC" },
+  { num: "10", label: "years of work (2017–2026)", color: "#717FDA" },
   { num: "15", label: "districts reached", color: "#00CFA3" },
-  { num: "2,000+", label: "people trained", color: "#38D8FC" },
+  { num: "2,000+", label: "people trained", color: "#E8881A" },
 ];
 
 export default function ProjectsScreen() {
@@ -92,12 +92,12 @@ export default function ProjectsScreen() {
             letterSpacing: "-0.025em",
           }}
         >
-          Nine years of digital, data and AI literacy
+          Ten years of digital, data and AI literacy
         </h1>
         <p style={{ fontSize: 18, lineHeight: 1.62, color: "#454953", margin: 0 }}>
-          From a single open-data awareness survey in 2017 to a nationwide programme
-          reaching communities in all seven provinces — a year-by-year record of
-          what we ran, who we reached, and what changed.
+          A track record of data, digital and AI literacy programmes across Nepal,
+          from community datathons to national conferences to hands-on training
+          for local government.
         </p>
       </div>
 
@@ -135,61 +135,6 @@ export default function ProjectsScreen() {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Where we work */}
-      <div
-        style={{
-          background: "linear-gradient(135deg,#444A82,#15161A)",
-          borderRadius: 24,
-          padding: "36px 40px",
-          color: "#fff",
-          position: "relative",
-          overflow: "hidden",
-          marginBottom: 44,
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: "radial-gradient(rgba(255,255,255,.2) 1.4px,transparent 1.4px)",
-            backgroundSize: "24px 24px",
-            opacity: 0.5,
-            pointerEvents: "none",
-          }}
-        />
-        <div style={{ position: "relative" }}>
-          <h3 className="font-display" style={{ fontSize: 22, margin: "0 0 8px" }}>
-            Where we work
-          </h3>
-          <p style={{ fontSize: 15, opacity: 0.9, lineHeight: 1.55, margin: "0 0 20px", maxWidth: "44em" }}>
-            In-person trainings and workshops across 15 districts spanning all
-            seven provinces, from Kathmandu to Dadeldhura and Bardiya.
-          </p>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            {[
-              "Kathmandu", "Lalitpur", "Bhaktapur", "Kaski (Pokhara)",
-              "Rupandehi (Butwal)", "Dang", "Parsa (Birgunj)",
-              "Dhanusha (Janakpurdham)", "Sunsari (Itahari)", "Bhojpur",
-              "Banke (Nepalgunj)", "Kanchanpur (Dhangadhi)", "Dadeldhura",
-              "Surkhet (Simta)", "Bardiya",
-            ].map((place) => (
-              <span
-                key={place}
-                style={{
-                  background: "rgba(255,255,255,.14)",
-                  borderRadius: 999,
-                  padding: "5px 12px",
-                  fontSize: 12,
-                  fontWeight: 600,
-                }}
-              >
-                {place}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Tag filter bar */}
@@ -365,7 +310,7 @@ export default function ProjectsScreen() {
                           style={{
                             background: yearGroup.color + "20",
                             color:
-                              yearGroup.color === "#38D8FC" || yearGroup.color === "#9AEEF7"
+                              yearGroup.color === "#38D8FC"
                                 ? "#06303C"
                                 : yearGroup.color,
                             fontSize: 12,
